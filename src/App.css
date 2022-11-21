@@ -1,0 +1,52 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  height: 10vh;
+}
+
+.pokeball {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  pointer-events: none;
+  animation: pokeball-spin 2s linear 1;
+}
+
+@keyframes pokeball-spin {
+  from {
+    transform: rotate(0deg);
+    width: 5px;
+    height: 5px;
+  }
+  to {
+    transform: rotate(360deg);
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.pokedex {
+  height: 80vh;
+  background-color: #ff1f1f;
+  border: 10px solid rgb(73, 72, 72);
+  border-radius: 50px;
+  margin: 20px;
+}
+
+.search-bar {
+  color: white;
+  background-color: grey;
+  text-align: center;
+  border: 2px white solid;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+}
