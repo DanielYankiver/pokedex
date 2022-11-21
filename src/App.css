@@ -2,6 +2,8 @@
   background-color: #282c34;
   min-height: 100vh;
   padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
 }
 
 .App::-webkit-scrollbar {
@@ -9,7 +11,27 @@
 }
 
 .header {
-  height: 10vh;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon-logo {
+  width: 300px;
+  height: 160px;
+  margin-bottom: -44px;
+}
+
+.pokeball-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .pokeball {
@@ -33,7 +55,7 @@
   }
 }
 
-.pokedex {
+/* .pokedex {
   height: 80vh;
   background-color: #ff1f1f;
   border: 10px solid rgb(73, 72, 72);
@@ -49,4 +71,4 @@
   width: 100px;
   height: 20px;
   border-radius: 5px;
-}
+} */
