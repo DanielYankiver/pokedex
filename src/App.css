@@ -1,5 +1,8 @@
 .App {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  /* background-color: #ffde00; */
+  /* background-image: url("./bg.jpg"); */
+  background-color: #747575;
   min-height: 100vh;
   min-width: 100vw;
   padding-bottom: 100px;
@@ -9,7 +12,7 @@
   display: none;
 }
 
-.body {
+.header {
   /* height: 30vh;
   width: 100vw; */
   display: flex;
@@ -17,11 +20,11 @@
   flex-direction: column;
 }
 
-.body-wrapper {
+.header-wrapper {
   display: flex;
   flex-direction: column;
   /* width: 100%; */
-  height: 24vh;
+  height: 22vh;
 }
 
 .pokeball-logo-wrapper {
@@ -31,9 +34,10 @@
 }
 
 .pokemon-logo {
-  width: 300px;
-  height: 160px;
+  width: 260px;
+  height: 140px;
   margin-bottom: -44px;
+  margin-top: -10px;
 }
 
 .pokeball-wrapper {
@@ -69,19 +73,44 @@
 }
 
 .pokedex {
-  height: 70vh;
-  width: 1000px;
+  height: 556px;
+  min-width: 860px;
   background-color: #ff1f1f;
-  border: 10px solid rgb(73, 72, 72);
-  /* border-radius: 50px; */
-  margin: 20px;
+  /* background-color: #fe0065; */
+  border: 4px solid rgb(73, 72, 72);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.search-bar {
-  background-color: white;
-  text-align: center;
-  border: 2px white solid;
-  width: 160px;
-  height: 20px;
-  border-radius: 5px;
+.panels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left-panel{
+  width: 400px;
+  height: 540px;
+  border: 4px solid rgb(73, 72, 72);
+  margin-left: 3px;
+  border-radius: 10px;
+}
+
+.middle-area {
+  width: 10px;
+  height: 540px;
+  border: 4px solid rgb(73, 72, 72);
+  margin-left: 8px;
+  margin-right: 8px;
+  /* border-radius: 10px; */
+}
+
+.right-panel{
+  width: 400px;
+  height: 540px;
+  border: 4px solid rgb(73, 72, 72);
+  margin-right: 3px;
+  border-radius: 10px;
 }

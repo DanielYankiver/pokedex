@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="body">
-        <div className="body-wrapper">
+      <div className="header">
+        <div className="header-wrapper">
           <div className="pokeball-logo-wrapper">
             <img src={logo} className="pokemon-logo" alt="logo" />
           </div>
@@ -29,20 +29,30 @@ function App() {
           </div>
         </div>
         <div className="pokedex-container">
-        <div className='pokedex'>
-          <input value={pokemon} onChange={evt => setPokemon(evt.target.value)} />
-          <button onClick={handleClick}>Search</button>
-          { details && (
-            details.error ? (
-              <h1>{details.error}</h1>
-            ) : (
-              <div>
-                <h1>{details.name}</h1>
-                <img src={details.sprites.front_default} alt="lolsorry" />
-              </div>
-          ))}
-        </div>
+          <div className="pokedex">
+            <div className="panels">
+              <div className="left-panel">
 
+              </div>
+              <div className="middle-area">
+
+              </div>
+              <div className="right-panel">
+
+              </div>
+            </div>
+            {/* <input value={pokemon} onChange={evt => setPokemon(evt.target.value)} />
+            <button onClick={handleClick}>Search</button>
+            { details && (
+              details.error ? (
+                <h1>{details.error}</h1>
+              ) : (
+                <div>
+                  <h1>{details.name}</h1>
+                  <img src={details.sprites.front_default} alt="lolsorry" />
+                </div>
+            ))} */}
+          </div>
         </div>
       </div>
     </div>
