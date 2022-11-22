@@ -6,16 +6,18 @@ import './App.css';
 
 function App() {
   const [pokemon, setPokemon] = useState('');
-  const [details, setDetails] = useState(null);
+  const [pokeData, setPokeData] = useState(null);
 
   const handleClick = async () => {
       try {
-      const responce = await pokemonService.detail(pokemon)
-      setDetails(responce);
+      const response = await pokemonService.detail(pokemon ? pokemon.toLocaleLowerCase() : "blank")
+      setPokeData(response);
     } catch (err) {
-      setDetails({ error: "pokemon not found" });
+      setPokeData({ error: "pokemon not found" });
     }
   };
+
+  console.log(pokeData)
 
   return (
     <div className="App">
@@ -31,27 +33,43 @@ function App() {
         <div className="pokedex-container">
           <div className="pokedex">
             <div className="panels">
-              <div className="left-panel">
+                <div className="left-panel">
+                  <div className="left-panel-container">
+                    <div className="search">
+                      <input value={pokemon} onChange={evt => setPokemon(evt.target.value)} />
+                      <button className="search-button" onClick={handleClick}>Search</button>
+                    </div>
+                    { 
+                    pokeData && (
+                      pokeData.error 
+                        ? (
+                        <h1>{pokeData.error}</h1>
+                        ) : (
+                        <div>
+                            <div className="name-container">
+                              <div className="name">
+                                {pokeData.name.toUpperCase()}
+                              </div>
+                            </div>
+                            <div className="image-container">
+                              <img src={pokeData.sprites.front_default} alt="pokemon-image" />
+                            </div>
+                            <div className="poke">
 
-              </div>
+                            </div>
+                        </div>
+                    ))}
+                  </div>
+                </div>
               <div className="middle-area">
 
               </div>
               <div className="right-panel">
-
+                <div className="right-panel-container">
+                    
+                </div>
               </div>
             </div>
-            {/* <input value={pokemon} onChange={evt => setPokemon(evt.target.value)} />
-            <button onClick={handleClick}>Search</button>
-            { details && (
-              details.error ? (
-                <h1>{details.error}</h1>
-              ) : (
-                <div>
-                  <h1>{details.name}</h1>
-                  <img src={details.sprites.front_default} alt="lolsorry" />
-                </div>
-            ))} */}
           </div>
         </div>
       </div>
