@@ -54,8 +54,9 @@ function App() {
                             <div className="image-container">
                               <img src={pokeData.sprites.front_default} alt="pokemon-image" />
                             </div>
-                            <div className="poke">
-
+                            <div className="poke-types">
+                              {/* Add types here: ex: charizard = fire */}
+                              {/* style types do have dynamic colors: ex: water = blue square */}
                             </div>
                         </div>
                     ))}
