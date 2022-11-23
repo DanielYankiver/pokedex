@@ -39,6 +39,7 @@ function App() {
                       <input value={pokemon} onChange={evt => setPokemon(evt.target.value)} />
                       <button className="search-button" onClick={handleClick}>Search</button>
                     </div>
+                    {/* <div className="image-container"></div> */}
                     { 
                     pokeData && (
                       pokeData.error 
