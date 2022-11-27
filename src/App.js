@@ -118,6 +118,9 @@ function App() {
                   </div>
                 </div>
               <div className="middle-area">
+                <div className="center-square-1"></div>
+                <div className="center-square-2"></div>
+                <div className="center-square-3"></div>
 
               </div>
               <div className="right-panel">

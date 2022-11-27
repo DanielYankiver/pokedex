@@ -80,7 +80,7 @@
   background-color: #CE1C24;
   /* background-color: #ff1f1f; */
   /* background-color: #fe0065; */
-  border: 4px solid rgb(73, 72, 72);
+  border: 4px solid black;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -98,7 +98,7 @@
 .left-panel{
   width: 344px;
   height: 540px;
-  border: 4px solid rgb(73, 72, 72);
+  border: 4px solid black;
   margin-left: 3px;
   border-radius: 10px 0px 0px 10px;
   display: flex;
@@ -109,7 +109,7 @@
 .left-panel-container {
   width: 310px;
   height: 506px;
-  border: 4px solid rgb(73, 72, 72);
+  border: 4px solid black;
   /* margin: 10px; */
 }
 
@@ -165,7 +165,7 @@
 
 input {
   background-color: #98cb98;
-  width: 175px;
+  width: 171px;
   height: 18px;
   border-radius: 10px;
   padding-left: 8px;
@@ -335,23 +335,48 @@ input {
   margin-top: 12px;
 }
 
-
-
-
-
-
-
-
+/*** MIDDLE AREA  ***/
 
 .middle-area {
   width: 10px;
   height: 540px;
   border-width: 4px 0px 4px 0px; /* top right bottom left */
   border-style: solid;
-  border-color:rgb(73, 72, 72);
+  border-color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   /* margin-left: 8px;
   margin-right: 8px; */
   /* border-radius: 10px; */
+}
+
+.center-square-1 {
+  width: 10px;
+  margin-top: -12px;
+  margin-left: -4px;
+  height: 110px;
+  background-color: #7f1218;
+  border: 4px solid black;
+}
+
+.center-square-2 {
+  width: 10px;
+  margin-left: -4px;
+  height: 110px;
+  background-color: #7f1218;
+  border: 4px solid black;
+  
+}
+
+.center-square-3 {
+  width: 10px;
+  margin-bottom: -12px;
+  margin-left: -4px;
+  height: 110px;
+  background-color: #7f1218;
+  border: 4px solid black;
+
 }
 
 
@@ -359,7 +384,7 @@ input {
 .right-panel{
   width: 344px;
   height: 540px;
-  border: 4px solid rgb(73, 72, 72);
+  border: 4px solid black;
   margin-right: 3px;
   border-radius: 0px 10px 10px 0px ;
   display: flex;
@@ -370,6 +395,6 @@ input {
 .right-panel-container {
   width: 310px;
   height: 506px;
-  border: 4px solid rgb(73, 72, 72);
+  border: 4px solid black;
   /* margin: 14px; */
 }
