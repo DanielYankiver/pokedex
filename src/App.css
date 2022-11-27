@@ -113,7 +113,7 @@
   /* margin: 10px; */
 }
 
-.camera-container {
+.camera-search-container {
   position: relative;
   display: flex;
   justify-content: start;
@@ -294,11 +294,14 @@ input {
   justify-content: space-between;
 }
 
-.specs {
+.specs-container {
   background-color: #98cb98;
-  border: solid black;
   width: 160px;
   height: 60px;
+  border: solid black;
+}
+
+.specs {
   font-size: 9px;
   display: flex;
   flex-direction: column;
@@ -325,14 +328,21 @@ input {
   margin: 5px;
 }
 
-.back-button {
-  width: 80px;
-  height: 30px;
-  background-color: silver;
+.rotate-button {
+  width: 70px;
+  height: 50px;
+  background-color: #6c96e6;
   border: solid black;
-  border-radius: 5px;
-  margin-right: 26px;
-  margin-top: 12px;
+  border-radius: 20px;
+  margin-right: 24px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rotate {
+  width: 50px;
 }
 
 /*** MIDDLE AREA  ***/
@@ -380,6 +390,7 @@ input {
 }
 
 
+/*** RIGHT PANEL ***/
 
 .right-panel{
   width: 344px;
@@ -396,5 +407,8 @@ input {
   width: 310px;
   height: 506px;
   border: 4px solid black;
+  display: flex;
+  justify-content: center;
   /* margin: 14px; */
 }
+

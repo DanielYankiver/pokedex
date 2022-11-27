@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import logo from './pokemon-logo.png';
 import pokeball from './pokeball.png';
+import rotate from './rotate.png';
 import pokemonService from './pokemonService';
 import './App.css';
+import Types from "./components/Types";
 
 function App() {
   const [pokemon, setPokemon] = useState('');
   const [pokeData, setPokeData] = useState(null);
+  const [rotatePoke, setRotatePoke] = useState(false);
 
   const handleClick = async () => {
       try {
@@ -16,6 +19,11 @@ function App() {
       setPokeData({ error: <div className="hello">pokemon not found</div> });
     }
   };
+
+  function rotatePokemon() {
+    setRotatePoke(!rotatePoke)
+    console.log("AYOOOO")
+  }
 
   console.log(pokeData)
 
@@ -35,7 +43,7 @@ function App() {
             <div className="panels">
                 <div className="left-panel">
                   <div className="left-panel-container">
-                    <div className="camera-container">
+                    <div className="camera-search-container">
                       <div className="lens-border">
                         <div className="lens">
                           <div className="lens-dot"></div>
@@ -43,7 +51,8 @@ function App() {
                       </div>
                       <div className="search-lights-wrapper">
                         <div className="search">
-                          <input 
+                          <input
+                            id="search-input" 
                             placeholder="search"
                             value={pokemon} 
                             onChange={evt => setPokemon(evt.target.value)} 
@@ -74,44 +83,55 @@ function App() {
                               {pokeData.name.toUpperCase()}
                             </div>)}
                     </div>
-                    <div className="image-container">
-                      {pokeData && (pokeData.error 
-                          ? <h1>{pokeData.error}</h1> 
-                            : <img src={pokeData.sprites.front_default} alt="pokemon-image" />)}
-                    </div>
+                    {rotatePoke && (
+                       <div className="image-container">
+                       {pokeData && (pokeData.error 
+                           ? <h1>{pokeData.error}</h1> 
+                             : <img src={pokeData.sprites.back_default} alt="pokemon-image" />)}
+                     </div>
+                    )}
+                    {!rotatePoke && (
+                       <div className="image-container">
+                       {pokeData && (pokeData.error 
+                           ? <h1>{pokeData.error}</h1> 
+                             : <img src={pokeData.sprites.front_default} alt="pokemon-image" />)}
+                     </div>
+                    )}
                     <div className="specs-back-container">
-                      {pokeData && (pokeData.error 
-                          ? ""
-                            : 
+                      <div className="specs-container">
+                        {pokeData && (pokeData.error 
+                            ? ""
+                              : 
                             <div className="specs">
-                              <div className="weight-wrapper">
-                                <div className="weight-text">
-                                  weight:
+                                <div className="weight-wrapper">
+                                  <div className="weight-text">
+                                    weight:
+                                  </div>
+                                  <div className="weight">
+                                    {pokeData.weight / 10}{" "}kgs
+                                  </div>
                                 </div>
-                                <div className="weight">
-                                  {pokeData.weight / 10}{" "}kgs
+                                <div className="height-wrapper">
+                                  <div className="height-text">
+                                    height:
+                                  </div>
+                                  <div className="height">
+                                    {pokeData.height * 10}{" "}cm
+                                  </div>
+                                </div>
+                                <div className="base-exp-wrapper">
+                                  <div className="base-exp-text">
+                                    base:
+                                  </div>
+                                  <div className="base-exp">
+                                    {pokeData.base_experience}{" "}xp
+                                  </div>
                                 </div>
                               </div>
-                              <div className="height-wrapper">
-                                <div className="height-text">
-                                  height:
-                                </div>
-                                <div className="height">
-                                  {pokeData.height * 10}{" "}cm
-                                </div>
-                              </div>
-                              <div className="base-exp-wrapper">
-                                <div className="base-exp-text">
-                                  base:
-                                </div>
-                                <div className="base-exp">
-                                  {pokeData.base_experience}{" "}xp
-                                </div>
-                              </div>
-                            </div>
-                      )}
-                      <div className="back-button">
-                        
+                        )}
+                      </div>
+                      <div className="rotate-button" onClick={rotatePokemon}>
+                        <img src={rotate} className="rotate" alt="rotate-symbol" />
                       </div>
                       
                     </div>
@@ -121,12 +141,12 @@ function App() {
                 <div className="center-square-1"></div>
                 <div className="center-square-2"></div>
                 <div className="center-square-3"></div>
-
               </div>
               <div className="right-panel">
                 <div className="right-panel-container">
-                    
+                  <Types pokeData={pokeData}/>           
                 </div>
+
               </div>
             </div>
           </div>

@@ -1,0 +1,12 @@
+.types-container {
+  margin-top: 12px;
+  /* background-color: #747575; */
+  width: 100%;
+  height: 70px;
+  /* border: solid black; */
+  /* background-color: #98cb98; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
