@@ -13,7 +13,7 @@ function App() {
       const response = await pokemonService.detail(pokemon ? pokemon.toLocaleLowerCase() : "blank")
       setPokeData(response);
     } catch (err) {
-      setPokeData({ error: "pokemon not found" });
+      setPokeData({ error: <div className="hello">pokemon not found</div> });
     }
   };
 
@@ -36,31 +36,25 @@ function App() {
                 <div className="left-panel">
                   <div className="left-panel-container">
                     <div className="search">
-                      <input value={pokemon} onChange={evt => setPokemon(evt.target.value)} />
+                      <input 
+                        value={pokemon} 
+                        onChange={evt => setPokemon(evt.target.value)} 
+                        onKeyPress={(e) => e.key === 'Enter' && handleClick()}
+                      />
                       <button className="search-button" onClick={handleClick}>Search</button>
                     </div>
-                    {/* <div className="image-container"></div> */}
-                    { 
-                    pokeData && (
-                      pokeData.error 
-                        ? (
-                        <h1>{pokeData.error}</h1>
-                        ) : (
-                        <div>
-                            <div className="name-container">
-                              <div className="name">
-                                {pokeData.name.toUpperCase()}
-                              </div>
-                            </div>
-                            <div className="image-container">
-                              <img src={pokeData.sprites.front_default} alt="pokemon-image" />
-                            </div>
-                            <div className="poke-types">
-                              {/* Add types here: ex: charizard = fire */}
-                              {/* style types do have dynamic colors: ex: water = blue square */}
-                            </div>
-                        </div>
-                    ))}
+                    <div className="name-container">
+                      {pokeData && (pokeData.error 
+                        ? "" 
+                          : <div className="name">
+                              {pokeData.name.toUpperCase()}
+                            </div>)}
+                    </div>
+                    <div className="image-container">
+                      {pokeData && (pokeData.error 
+                          ? <h1>{pokeData.error}</h1> 
+                            : <img src={pokeData.sprites.front_default} alt="pokemon-image" />)}
+                    </div>
                   </div>
                 </div>
               <div className="middle-area">
