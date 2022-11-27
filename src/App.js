@@ -35,13 +35,37 @@ function App() {
             <div className="panels">
                 <div className="left-panel">
                   <div className="left-panel-container">
-                    <div className="search">
-                      <input 
-                        value={pokemon} 
-                        onChange={evt => setPokemon(evt.target.value)} 
-                        onKeyPress={(e) => e.key === 'Enter' && handleClick()}
-                      />
-                      <button className="search-button" onClick={handleClick}>Search</button>
+                    <div className="camera-container">
+                      <div className="lens-border">
+                        <div className="lens">
+                          <div className="lens-dot"></div>
+                        </div>
+                      </div>
+                      <div className="search-lights-wrapper">
+                        <div className="search">
+                          <input 
+                            placeholder="search"
+                            value={pokemon} 
+                            onChange={evt => setPokemon(evt.target.value)} 
+                            onKeyPress={(e) => e.key === 'Enter' && handleClick()}
+                          />
+                          {/* <button className="search-button" onClick={handleClick}>Search</button> */}
+                        </div>
+                        <div className="camera-lights-container">
+                          <div className="red-light">
+                            <div className="red-light-dot"></div>
+                          </div>
+                          <div className="yellow-light">
+                            <div className="yellow-light-dot"></div>
+                          </div>
+                          <div className="green-light">
+                            <div className="green-light-dot"></div>
+                          </div>
+                          <div className="yellow-light-long">
+                            <div className="yellow-light-long-dot"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div className="name-container">
                       {pokeData && (pokeData.error 
@@ -54,6 +78,42 @@ function App() {
                       {pokeData && (pokeData.error 
                           ? <h1>{pokeData.error}</h1> 
                             : <img src={pokeData.sprites.front_default} alt="pokemon-image" />)}
+                    </div>
+                    <div className="specs-back-container">
+                      {pokeData && (pokeData.error 
+                          ? ""
+                            : 
+                            <div className="specs">
+                              <div className="weight-wrapper">
+                                <div className="weight-text">
+                                  weight:
+                                </div>
+                                <div className="weight">
+                                  {pokeData.weight / 10}{" "}kgs
+                                </div>
+                              </div>
+                              <div className="height-wrapper">
+                                <div className="height-text">
+                                  height:
+                                </div>
+                                <div className="height">
+                                  {pokeData.height * 10}{" "}cm
+                                </div>
+                              </div>
+                              <div className="base-exp-wrapper">
+                                <div className="base-exp-text">
+                                  base:
+                                </div>
+                                <div className="base-exp">
+                                  {pokeData.base_experience}{" "}xp
+                                </div>
+                              </div>
+                            </div>
+                      )}
+                      <div className="back-button">
+                        
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
