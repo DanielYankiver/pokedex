@@ -5,6 +5,7 @@ import rotate from './rotate.png';
 import pokemonService from './pokemonService';
 import './App.css';
 import Types from "./components/Types";
+import Stats from "./components/Stats";
 
 function App() {
   const [pokemon, setPokemon] = useState('');
@@ -58,7 +59,6 @@ function App() {
                             onChange={evt => setPokemon(evt.target.value)} 
                             onKeyPress={(e) => e.key === 'Enter' && handleClick()}
                           />
-                          {/* <button className="search-button" onClick={handleClick}>Search</button> */}
                         </div>
                         <div className="camera-lights-container">
                           <div className="red-light">
@@ -144,7 +144,12 @@ function App() {
               </div>
               <div className="right-panel">
                 <div className="right-panel-container">
-                  <Types pokeData={pokeData}/>           
+                  <div className="types-wrapper">
+                    <Types pokeData={pokeData}/>
+                  </div>
+                  <div className="stats-wrapper">
+                    <Stats pokeData={pokeData} />           
+                  </div>
                 </div>
 
               </div>

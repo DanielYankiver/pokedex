@@ -1,0 +1,8 @@
+.stats-container {
+  width: 260px;
+  height: 200px;
+  background-color: #98cb98;
+  border: solid black;
+  margin-top: 20px;
+  font-size: 12px;
+}
