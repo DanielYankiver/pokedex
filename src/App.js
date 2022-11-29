@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import pokemonService from './pokemonService';
 import logo from './pokemon-logo.png';
 import pokeball from './pokeball.png';
 import rotate from './rotate.png';
-import pokemonService from './pokemonService';
-import './App.css';
+import mute from './mute.png';
+import unmute from './unmute.png';
 import Types from "./components/Types";
 import Stats from "./components/Stats";
+import Moves from "./components/Moves";
+import Abilities from "./components/Abilities";
+import './App.css';
 
 function App() {
   const [pokemon, setPokemon] = useState('');
   const [pokeData, setPokeData] = useState(null);
   const [rotatePoke, setRotatePoke] = useState(false);
+  const [toggleMusic, setToggleMusic] = useState(false);
 
   const handleClick = async () => {
       try {
@@ -55,6 +60,7 @@ function App() {
                           <input
                             id="search-input" 
                             placeholder="search"
+                            spellcheck="false"
                             value={pokemon} 
                             onChange={evt => setPokemon(evt.target.value)} 
                             onKeyPress={(e) => e.key === 'Enter' && handleClick()}
@@ -108,7 +114,7 @@ function App() {
                                     weight:
                                   </div>
                                   <div className="weight">
-                                    {pokeData.weight / 10}{" "}kgs
+                                    {pokeData.weight / 10}kgs
                                   </div>
                                 </div>
                                 <div className="height-wrapper">
@@ -116,7 +122,7 @@ function App() {
                                     height:
                                   </div>
                                   <div className="height">
-                                    {pokeData.height * 10}{" "}cm
+                                    {pokeData.height * 10}cm
                                   </div>
                                 </div>
                                 <div className="base-exp-wrapper">
@@ -124,7 +130,7 @@ function App() {
                                     base:
                                   </div>
                                   <div className="base-exp">
-                                    {pokeData.base_experience}{" "}xp
+                                    {pokeData.base_experience}xp
                                   </div>
                                 </div>
                               </div>
@@ -145,10 +151,36 @@ function App() {
               <div className="right-panel">
                 <div className="right-panel-container">
                   <div className="types-wrapper">
+                    <div className="speaker-container">
+                      <div className="speaker-1"></div>
+                      <div className="speaker-2"></div>
+                      <div className="speaker-3"></div>
+                    </div>
                     <Types pokeData={pokeData}/>
+                    <div className="speaker-container">
+                      <div className="speaker-1"></div>
+                      <div className="speaker-2"></div>
+                      <div className="speaker-3"></div>
+                    </div>
+                    {/* <div className="music-button-container">
+                      <div className="music-button" onClick={() => setToggleMusic(!toggleMusic)}>
+                        {toggleMusic && (
+                          <img src={mute} className="mute" alt="mute" />
+                        )}
+                        {!toggleMusic && (
+                          <img src={unmute} className="unmute" alt="unmute" />
+                        )}
+                      </div>
+                    </div> */}
                   </div>
                   <div className="stats-wrapper">
                     <Stats pokeData={pokeData} />           
+                  </div>
+                  <div className="moves-wrapper">
+                    <Moves pokeData={pokeData} />
+                  </div>
+                  <div className="abilities-wrapper">
+                    <Abilities pokeData={pokeData} />
                   </div>
                 </div>
 

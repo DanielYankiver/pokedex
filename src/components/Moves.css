@@ -1,0 +1,39 @@
+.moves-container {
+  margin-top: 20px;
+}
+
+.moves-title {
+  text-transform: capitalize;
+  width: 260px;
+  height: 20px;
+  background-color: #98cb98;
+  border: solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2px;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.move-wrapper {
+  width: 266px;
+  height: 110px;
+  /* background-color: blueviolet;
+  border: solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.move-box {
+  font-size: 9px;
+  border: 3px solid black;
+  width: 125px;
+  height: 20px;
+  margin: 1px;
+  background-color: #6c96e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

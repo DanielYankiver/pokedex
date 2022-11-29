@@ -77,7 +77,7 @@
   min-width: 724px;
   max-width: 724px;
   width: 724px;
-  background-color: #CE1C24;
+  background-color: #7f1218;
   /* background-color: #ff1f1f; */
   /* background-color: #fe0065; */
   border: 4px solid black;
@@ -104,6 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #CE1C24;
 }
 
 .left-panel-container {
@@ -119,7 +120,7 @@
   justify-content: start;
   align-items: center;
   margin-left: 16px;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .lens-border {
@@ -171,6 +172,7 @@ input {
   padding-left: 8px;
   padding-top: 3px;
   border: solid black;
+  outline-width: 0;
 }
 
 /* .search-button {
@@ -297,8 +299,9 @@ input {
 .specs-container {
   background-color: #98cb98;
   width: 160px;
-  height: 60px;
+  height: 64px;
   border: solid black;
+  text-transform: capitalize;
 }
 
 .specs {
@@ -311,21 +314,24 @@ input {
   display: flex;
   justify-content: space-between;
   margin-top: 7px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border-bottom: dotted rgb(158, 156, 156);
 }
 
 .height-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 5px;
+  margin: 4px;
+  border-bottom: dotted rgb(158, 156, 156);
 }
 
 .base-exp-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 5px;
+  margin: 4px;
+  border-bottom: dotted rgb(158, 156, 156);
 }
 
 .rotate-button {
@@ -335,7 +341,7 @@ input {
   border: solid black;
   border-radius: 20px;
   margin-right: 24px;
-  margin-top: 5px;
+  margin-top: 7px;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -401,6 +407,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #CE1C24;
 }
 
 .right-panel-container {
@@ -415,12 +422,59 @@ input {
   /* margin: 14px; */
 }
 
+
 .types-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.speaker-container {
+  width: 18%;
+  height: 50px;
+  /* margin-top: 6px; */
+  /* background-color: greenyellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 16px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.speaker-1 {
+  width: 40px;
+  height: 6px;
+  margin: 4px;
+  background-color:#7f1218;
+  border: solid black;
+}
+.speaker-2 {
+  width: 40px;
+  height: 6px;
+  margin: 4px;
+  background-color:#7f1218;
+  border: solid black;
+}
+.speaker-3 {
+  width: 40px;
+  height: 6px;
+  margin: 4px;
+  background-color:#7f1218;
+  border: solid black;
+}
+
+.stats-wrapper {
   display: flex;
   justify-content: center;
 }
 
-.stats-wrapper {
+.moves-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.abilities-wrapper {
   display: flex;
   justify-content: center;
 }
