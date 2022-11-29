@@ -162,16 +162,6 @@ function App() {
                       <div className="speaker-2"></div>
                       <div className="speaker-3"></div>
                     </div>
-                    {/* <div className="music-button-container">
-                      <div className="music-button" onClick={() => setToggleMusic(!toggleMusic)}>
-                        {toggleMusic && (
-                          <img src={mute} className="mute" alt="mute" />
-                        )}
-                        {!toggleMusic && (
-                          <img src={unmute} className="unmute" alt="unmute" />
-                        )}
-                      </div>
-                    </div> */}
                   </div>
                   <div className="stats-wrapper">
                     <Stats pokeData={pokeData} />           
