@@ -1,7 +1,6 @@
 import React from "react";
 import "./Types.css";
 
-
 export default function Types ({pokeData}) {
   
   return (

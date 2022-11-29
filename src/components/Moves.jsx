@@ -1,7 +1,6 @@
 import React from "react";
 import "./Moves.css";
 
-
 export default function Moves ({pokeData}) {
 
   const allMoves = pokeData && (pokeData.error ? " " : pokeData.moves.map(m => m.move.name))

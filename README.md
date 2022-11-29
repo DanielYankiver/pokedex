@@ -1,14 +1,13 @@
 # MY NOTES 
-- I built this pokedex using the technologies I know best: React.js, Javascript and Vanilla CSS (all CSS libraries are easy for me to use)
-- I could showcase my skill sets as a developer 
+- I built this pokedex using the technologies I know best: React.js and Javascript. 
+- I used vanilla CSS, but I could have just as easy built this with SCSS or a CSS library. 
+- My goal was to showcase my creative and technical skills to the best of my ability.
 - I did not use Typescript or Redux, but I know I could ramp up on a project that includes those technologies fast
 - If I had more time I would have added: 
   - evolutions
   - history
   - the ability to take a photo and add it to the pokedex
   - playing of the pokemon theme song on button press 
-
-
 
 # Getting Started with Create React App
 

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Abilities.css";
 
-
 export default function Abilities ({pokeData}) {
 
   const abilities = pokeData && (pokeData.error ? " " : pokeData.abilities.map(a => a.ability.name))
