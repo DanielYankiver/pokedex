@@ -60,7 +60,7 @@ function App() {
                           <input
                             id="search-input" 
                             placeholder="search"
-                            spellcheck="false"
+                            spellCheck="false"
                             value={pokemon} 
                             onChange={evt => setPokemon(evt.target.value)} 
                             onKeyPress={(e) => e.key === 'Enter' && handleClick()}
@@ -173,7 +173,6 @@ function App() {
                     <Abilities pokeData={pokeData} />
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
