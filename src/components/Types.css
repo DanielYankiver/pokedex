@@ -1,7 +1,5 @@
 .types-container {
   margin-top: 12px;
-  /* background-color: #747575; */
-  /* width: 260px; */
   width: 120px;
   height: 50px;
   border: solid black;
@@ -11,11 +9,6 @@
   flex-direction: column;
   align-items: center;
 }
-
-/* .types-header {
-  margin-top: 10px;
-  margin-bottom: 8px;
-} */
 
 .types {
   margin: 4px;

@@ -3,8 +3,6 @@ import pokemonService from './pokemonService';
 import logo from './pokemon-logo.png';
 import pokeball from './pokeball.png';
 import rotate from './rotate.png';
-import mute from './mute.png';
-import unmute from './unmute.png';
 import Types from "./components/Types";
 import Stats from "./components/Stats";
 import Moves from "./components/Moves";
@@ -15,33 +13,34 @@ function App() {
   const [pokemon, setPokemon] = useState('');
   const [pokeData, setPokeData] = useState(null);
   const [rotatePoke, setRotatePoke] = useState(false);
-  const [toggleMusic, setToggleMusic] = useState(false);
 
   const handleClick = async () => {
       try {
       const response = await pokemonService.detail(pokemon ? pokemon.toLocaleLowerCase() : "blank")
       setPokeData(response);
     } catch (err) {
-      setPokeData({ error: <div className="hello">pokemon not found</div> });
+      setPokeData({ error: 
+        <div className="error-message">
+          pokemon not found
+        </div> });
     }
   };
 
   function rotatePokemon() {
     setRotatePoke(!rotatePoke)
-    console.log("AYOOOO")
   }
-
-  console.log(pokeData)
 
   return (
     <div className="App">
       <div className="header">
         <div className="header-wrapper">
           <div className="pokeball-logo-wrapper">
-            <img src={logo} className="pokemon-logo" alt="logo" />
-          </div>
-          <div className="pokeball-wrapper">
-            <img src={pokeball} className="pokeball" alt="logo" />
+            <div className="logo-wrapper">
+              <img src={logo} className="pokemon-logo" alt="logo" />
+            </div>
+            <div className="pokeball-wrapper">
+              <img src={pokeball} className="pokeball" alt="logo" />
+            </div>
           </div>
         </div>
         <div className="pokedex-container">

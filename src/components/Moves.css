@@ -19,8 +19,6 @@
 .move-wrapper {
   width: 266px;
   height: 110px;
-  /* background-color: blueviolet;
-  border: solid black; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

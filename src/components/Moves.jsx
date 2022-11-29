@@ -5,10 +5,6 @@ import "./Moves.css";
 export default function Moves ({pokeData}) {
 
   const allMoves = pokeData && (pokeData.error ? " " : pokeData.moves.map(m => m.move.name))
-  
-  // const moves = allMoves.slice(0, 8)
-
-  // console.log(allMoves[0])
 
   return (
     <div className="moves-container">

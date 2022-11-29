@@ -3,9 +3,6 @@ import "./Stats.css";
 
 
 export default function Stats ({pokeData}) {
-
-  // console.log("stat name :", pokeData.stats.map(s => s.stat.name))
-  // console.log("stat number :", pokeData.stats.map(s => s.base_stat))
   
   return (
     <div className="stats-container">

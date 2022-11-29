@@ -1,9 +1,7 @@
 .App {
-  /* background-color: #282c34; */
-  /* background-color: #ffde00; */
-  /* background-image: url("./bg.jpg"); */
+  background-image: url("./bg.jpg");
   background-color: #747575;
-  min-height: 100vh;
+  min-height: 80vh;
   min-width: 100vw;
   padding-bottom: 100px;
 }
@@ -13,8 +11,6 @@
 }
 
 .header {
-  /* height: 30vh;
-  width: 100vw; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,19 +19,18 @@
 .header-wrapper {
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
-  height: 24vh;
+  height: 18vh;
 }
 
-.pokeball-logo-wrapper {
+.logo-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .pokemon-logo {
-  width: 260px;
-  height: 140px;
+  width: 210px;
+  height: 110px;
   margin-bottom: -44px;
   margin-top: -10px;
 }
@@ -47,9 +42,9 @@
 }
 
 .pokeball {
-  width: 60px;
-  height: 60px;
-  margin: 10px;
+  width: 45px;
+  height: 45px;
+  margin: 20px;
   pointer-events: none;
   animation: pokeball-spin 2s linear 1;
 }
@@ -62,8 +57,8 @@
   }
   to {
     transform: rotate(360deg);
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -78,8 +73,6 @@
   max-width: 724px;
   width: 724px;
   background-color: #7f1218;
-  /* background-color: #ff1f1f; */
-  /* background-color: #fe0065; */
   border: 4px solid black;
   border-radius: 16px;
   display: flex;
@@ -91,6 +84,13 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 20px;
+  text-transform: capitalize;
+  line-height: 50px;
 }
 
 /*** LEFT PANEL ***/
@@ -111,7 +111,6 @@
   width: 310px;
   height: 506px;
   border: 4px solid black;
-  /* margin: 10px; */
 }
 
 .camera-search-container {
@@ -174,10 +173,6 @@ input {
   border: solid black;
   outline-width: 0;
 }
-
-/* .search-button {
-  background-color: #7ca9f7;
-} */
 
 .camera-lights-container{
   margin-left: 15px;
@@ -356,15 +351,12 @@ input {
 .middle-area {
   width: 10px;
   height: 540px;
-  border-width: 4px 0px 4px 0px; /* top right bottom left */
+  border-width: 4px 0px 4px 0px; 
   border-style: solid;
   border-color:black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* margin-left: 8px;
-  margin-right: 8px; */
-  /* border-radius: 10px; */
 }
 
 .center-square-1 {
@@ -395,7 +387,6 @@ input {
 
 }
 
-
 /*** RIGHT PANEL ***/
 
 .right-panel{
@@ -414,14 +405,7 @@ input {
   width: 310px;
   height: 506px;
   border: 4px solid black;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-
-  /* margin: 14px; */
 }
-
 
 .types-wrapper {
   display: flex;
@@ -432,8 +416,6 @@ input {
 .speaker-container {
   width: 18%;
   height: 50px;
-  /* margin-top: 6px; */
-  /* background-color: greenyellow; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -478,4 +460,3 @@ input {
   display: flex;
   justify-content: center;
 }
-
