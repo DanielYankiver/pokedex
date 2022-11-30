@@ -29,7 +29,6 @@ export default function Stats ({pokeData}) {
             })
         )}
       </div>
-   
     </div>
   )
 }
