@@ -1,4 +1,4 @@
-const BASE_URL = "https://pokeapi.co/api/v2/";
+let BASE_URL = "https://pokeapi.co/api/v2/";
 
 function detail(pokemon) {
   // `https://pokeapi.co/api/v2/pokemon/${pokemon}`
