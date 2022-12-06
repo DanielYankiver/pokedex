@@ -92,14 +92,14 @@ function App() {
                        <div className="image-container">
                        {pokeData && (pokeData.error 
                            ? <h1>{pokeData.error}</h1> 
-                             : <img src={pokeData.sprites.back_default} alt="pokemon-image-back" />)}
+                             : <img src={pokeData.sprites.back_default} alt="pokemon-back" />)}
                      </div>
                     )}
                     {!rotatePoke && (
                        <div className="image-container">
                        {pokeData && (pokeData.error 
                            ? <h1>{pokeData.error}</h1> 
-                             : <img src={pokeData.sprites.front_default} alt="pokemon-image-front" />)}
+                             : <img src={pokeData.sprites.front_default} alt="pokemon-front" />)}
                      </div>
                     )}
                     <div className="specs-back-container">
