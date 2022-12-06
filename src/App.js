@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import pokemonService from './pokemonService';
 import logo from './pokemon-logo.png';
 import pokeball from './pokeball.png';
@@ -92,14 +92,14 @@ function App() {
                        <div className="image-container">
                        {pokeData && (pokeData.error 
                            ? <h1>{pokeData.error}</h1> 
-                             : <img src={pokeData.sprites.back_default} alt="pokemon-image" />)}
+                             : <img src={pokeData.sprites.back_default} alt="pokemon-image-back" />)}
                      </div>
                     )}
                     {!rotatePoke && (
                        <div className="image-container">
                        {pokeData && (pokeData.error 
                            ? <h1>{pokeData.error}</h1> 
-                             : <img src={pokeData.sprites.front_default} alt="pokemon-image" />)}
+                             : <img src={pokeData.sprites.front_default} alt="pokemon-image-front" />)}
                      </div>
                     )}
                     <div className="specs-back-container">
